@@ -1,0 +1,32 @@
+int relay1 = 8;
+int relay2 = 9;
+char command;
+
+void setup() {
+  Serial.begin(9600);  // Communication with voice module
+  pinMode(relay1, OUTPUT);
+  pinMode(relay2, OUTPUT);
+  digitalWrite(relay1, LOW);
+  digitalWrite(relay2, LOW);
+}
+
+void loop() {
+  if (Serial.available()) {
+    command = Serial.read();
+
+    switch(command) {
+      case 'A':  // Assume 'A' = Light On
+        digitalWrite(relay1, HIGH);
+        break;
+      case 'a':  // Assume 'a' = Light Off
+        digitalWrite(relay1, LOW);
+        break;
+      case 'B':  // Fan On
+        digitalWrite(relay2, HIGH);
+        break;
+      case 'b':  // Fan Off
+        digitalWrite(relay2, LOW);
+        break;
+    }
+  }
+}
