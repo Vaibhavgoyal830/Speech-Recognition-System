@@ -2,6 +2,9 @@
 ✅ Project: Basic Speech Recognition System for Command-Based Control of Devices
 🎯 Objective:
 To build a system that listens to voice commands (like “Turn on light”, “Turn off fan”) and controls devices using an embedded board (like Arduino or ESP32) and a speech recognition module.
+Circuit Diagram:
+![Uploading image.png…]()
+
 
 🔧 System Design
 🧰 Required Components:
